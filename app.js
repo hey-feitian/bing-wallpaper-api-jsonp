@@ -1,7 +1,7 @@
 const http = require("http");
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 80;
 
 app.get("/", function (req, resp) {
   const { format = "js", idx = 0, n = 1, mkt = "en-US", callback } = req.query;
